@@ -1,2 +1,7 @@
 # SimpleAreaFlat
-평야 자동 생성
+
+This is plugin that has an ability to auto generate SimpleArea-AreaSection like Plot plugin.
+
+Note that you must apply ifteam\SimpleArea plugin before using this.
+
+![https://i.imgur.com/IhbrJFL.jpg]
