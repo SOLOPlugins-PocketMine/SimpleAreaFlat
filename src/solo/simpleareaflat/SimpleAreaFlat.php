@@ -85,11 +85,6 @@ class SimpleAreaFlat extends Generator{
 				}
 			}
 		}
-
-		// AutoGen AreaSection
-		if($chunkX % 2 == 0 && $chunkZ % 2 == 0){
-			self::$areaSectionOrder[] = [$chunkX, $chunkZ];
-		}
 	}
 
 	public function populateChunk($chunkX, $chunkZ){
