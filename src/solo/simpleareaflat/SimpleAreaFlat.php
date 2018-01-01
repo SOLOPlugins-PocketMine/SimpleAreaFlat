@@ -35,8 +35,6 @@ class SimpleAreaFlat extends Generator{
 	const LAND_EDGE_FLAG = 2;
 	const LAND_FLAG = 3;
 
-	public static $areaSectionOrder = [];
-
 	public function __construct(array $options = []){
 		$this->options = $options;
 	}
