@@ -8,7 +8,6 @@ use pocketmine\event\level\ChunkPopulateEvent;
 use pocketmine\scheduler\PluginTask;
 use pocketmine\level\Level;
 use pocketmine\level\generator\Generator;
-use AreaLoader;
 
 class SimpleAreaFlatPlugin extends PluginBase implements Listener{
 

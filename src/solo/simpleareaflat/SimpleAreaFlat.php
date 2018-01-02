@@ -40,7 +40,7 @@ class SimpleAreaFlat extends Generator{
 	}
 
 	public function getName() : string{
-		return "areaflat";
+		return "SimpleAreaFlat";
 	}
 
 	public function getSettings() : array{
