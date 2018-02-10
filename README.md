@@ -1,6 +1,6 @@
 # SimpleAreaFlat
 
-This is plugin that has an ability to auto generate SimpleArea-AreaSection like Plot plugin.
+This is a plugin that has an ability to auto generate SimpleArea-AreaSection like Plot plugin.
 
 Note that you must apply ifteam\SimpleArea plugin before using this.
 
