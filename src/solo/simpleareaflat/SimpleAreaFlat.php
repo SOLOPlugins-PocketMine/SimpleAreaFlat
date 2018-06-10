@@ -52,7 +52,7 @@ class SimpleAreaFlat extends Generator{
 		$this->random = $random;
 	}
 
-	public function generateChunk(int $chunkX, int $chunkZ){
+	public function generateChunk(int $chunkX, int $chunkZ) : void{
 		$xOrder = array_pad([self::ROAD_FLAG, self::ROAD_FLAG, self::ROAD_FLAG, self::LAND_EDGE_FLAG], 16, self::LAND_FLAG);
 		$zOrder = array_pad([self::ROAD_FLAG, self::ROAD_FLAG, self::ROAD_FLAG, self::LAND_EDGE_FLAG], 16, self::LAND_FLAG);
 
@@ -87,7 +87,7 @@ class SimpleAreaFlat extends Generator{
 		}
 	}
 
-	public function populateChunk(int $chunkX, int $chunkZ){
+	public function populateChunk(int $chunkX, int $chunkZ) : void{
 
 	}
 
