@@ -1,8 +1,8 @@
 name: SimpleAreaFlat
-version: 0.0.2
+version: 0.0.3
 author: solo
 api:
-- 3.0.0-ALPHA10
+- 3.0.0-ALPHA12
 main: solo\simpleareaflat\SimpleAreaFlatPlugin
 depend:
 - SimpleArea
