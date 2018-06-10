@@ -7,12 +7,12 @@ use pocketmine\event\Listener;
 use pocketmine\event\level\ChunkPopulateEvent;
 use pocketmine\scheduler\PluginTask;
 use pocketmine\level\Level;
-use pocketmine\level\generator\Generator;
+use pocketmine\level\generator\GeneratorManager;
 
 class SimpleAreaFlatPlugin extends PluginBase implements Listener{
 
 	public function onLoad(){
-		Generator::addGenerator(SimpleAreaFlat::class, "SimpleAreaFlat");
+		GeneratorManager::addGenerator(SimpleAreaFlat::class, "SimpleAreaFlat");
 	}
 
 	public function onEnable(){
