@@ -20,10 +20,9 @@ class SimpleAreaFlatPlugin extends PluginBase implements Listener{
 	}
 
 	public function onChunkPopulate(ChunkPopulateEvent $event){
-		$property = (new \ReflectionClass(Level::class))->getProperty("generatorInstance");
-		$property->setAccessible(true);
-
-		if($property->getValue($event->getLevel()) instanceof SimpleAreaFlat){
+		
+		
+		if($event->getLevel()->getProvider()->getGenerator() instanceof SimpleAreaFlat){
 			$chunk = $event->getChunk();
 			if($chunk->getX() % 2 == 0 && $chunk->getZ() % 2 == 0){
 				$area = \ifteam\SimpleArea\database\area\AreaProvider::getInstance()->addArea(
