@@ -7,12 +7,12 @@ use pocketmine\event\Listener;
 use pocketmine\event\level\ChunkPopulateEvent;
 use pocketmine\scheduler\PluginTask;
 use pocketmine\level\Level;
-use pocketmine\level\generator\Generator;
+use pocketmine\level\generator\GeneratorManager;
 
 class SimpleAreaFlatPlugin extends PluginBase implements Listener{
 
 	public function onLoad(){
-		Generator::addGenerator(SimpleAreaFlat::class, "SimpleAreaFlat");
+		GeneratorManager::addGenerator(SimpleAreaFlat::class, "SimpleAreaFlat");
 	}
 
 	public function onEnable(){
@@ -20,10 +20,7 @@ class SimpleAreaFlatPlugin extends PluginBase implements Listener{
 	}
 
 	public function onChunkPopulate(ChunkPopulateEvent $event){
-		$property = (new \ReflectionClass(Level::class))->getProperty("generatorInstance");
-		$property->setAccessible(true);
-
-		if($property->getValue($event->getLevel()) instanceof SimpleAreaFlat){
+		if(GeneratorManager::getGenerator($event->getLevel()->getProvider()->getGenerator()) === SimpleAreaFlat::class){
 			$chunk = $event->getChunk();
 			if($chunk->getX() % 2 == 0 && $chunk->getZ() % 2 == 0){
 				$area = \ifteam\SimpleArea\database\area\AreaProvider::getInstance()->addArea(
