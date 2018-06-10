@@ -20,7 +20,7 @@ class SimpleAreaFlatPlugin extends PluginBase implements Listener{
 	}
 
 	public function onChunkPopulate(ChunkPopulateEvent $event){
-		
+		var_dump(GeneratorManager::getGenerator($event->getLevel()->getProvider()->getGenerator()));
 		
 		if(GeneratorManager::getGenerator($event->getLevel()->getProvider()->getGenerator()) instanceof SimpleAreaFlat){
 			$chunk = $event->getChunk();
